@@ -1,0 +1,72 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: rgb(248, 248, 248);
+}
+
+.container {
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.input-task {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.add-task {
+  margin-left: 10px;
+}
+
+div.task {
+  overflow-wrap: break-word;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+}
+
+button.danger {
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+}
+
+button.delete-button {
+  float: right;
+}
+
+input[type="text"], textarea {
+  padding: 7px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  min-width: 200px;
+}
+
+div.task {
+  margin: 20px 0;
+}
+
+.container-tasks {
+  margin-top: 20px;
+}
