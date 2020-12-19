@@ -1,8 +1,7 @@
 var tasks = [];
-
 recoveryTasks();
 
-document.querySelector('.add-task').addEventListener('click', (event) => {
+document.querySelector('.add-task').addEventListener('click', () => {
   const task = document.querySelector('.input-text-task').value;
   tasks.push(task);
   document.querySelector('.input-text-task').value = '';
@@ -29,7 +28,7 @@ function displayTasks() {
  * @param {Number} id 
  */
 function createDeleteButton(id) {
-  return ` <button class="danger delete-button" onclick="deleteTask(${id})">X</button>`
+  return `<button class="danger delete-button" onclick="deleteTask(${id})">✖</button>`
 }
 
 /**
