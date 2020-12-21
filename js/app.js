@@ -1,11 +1,21 @@
 var tasks = [];
 recoveryTasks();
+const addTaskButton = document.querySelector('.add-task');
+
+document.querySelector('.input-text-task').addEventListener('keyup', (event) => {
+  
+  if (event.target.value.length === 0) {
+    addTaskButton.setAttribute('disabled', true);
+  } else {
+    addTaskButton.removeAttribute('disabled');
+  }
+})
 
 document.querySelector('.add-task').addEventListener('click', () => {
   const task = document.querySelector('.input-text-task').value;
   tasks.push(task);
   document.querySelector('.input-text-task').value = '';
-
+  addTaskButton.setAttribute('disabled', true);
   displayTasks();
 });
 
@@ -54,8 +64,7 @@ function recoveryTasks() {
   let localStorageTasks = window.localStorage.getItem('tasks');
 
   if (localStorageTasks !== null) {
-    localStorageTasks = JSON.parse(localStorageTasks);
-    tasks = localStorageTasks;
+    tasks = JSON.parse(localStorageTasks) || []
     displayTasks();
   }
 }
